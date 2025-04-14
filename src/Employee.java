@@ -23,6 +23,7 @@ public class Employee {
         return salary;
     }
 
+
     public int getDepartment() {
         return department;
     }
@@ -49,6 +50,11 @@ public class Employee {
     @Override
     public int hashCode() {
         return Objects.hash(fullName, salary, department);
+    }
+
+    public void increaseSalary(double percentage) {
+        double increaseAmount = salary * (percentage / 100);
+        this.salary += (int) increaseAmount;
     }
 
     public String toString() {
